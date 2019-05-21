@@ -1,0 +1,95 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<title> java script</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<center>
+		<h1 style="color:red">registration form</h1>
+		<table border="2">
+	<form name="regform" onsubmit="return fun()">
+		
+		<tr>
+			<td> name</td><td><input type="text" name="name"></td>
+		</tr>
+		<tr><td> password</td><td><input type="password" name="password"></td>
+			
+		</tr>
+		<tr>
+			<td> email</td><td><input type="email" name="email"></td>
+		</tr>
+		<tr>
+			<td>phone number</td><td><input type="text" name="phonenumber"></td>
+		</tr>
+		<tr>
+			<td>address</td><td><input type="text" name="address"></td>
+		</tr>
+		<tr><td colspan=2><center><input type="submit" value="submit"></center></td></tr>
+		</tr>
+	</table>
+</form>
+</center>
+	
+
+	<script type="text/javascript">
+		function fun(){
+			var name=document.forms['regform']['name'];
+			var password=document.forms['regform']['password'];
+			var email=document.forms['regform']['email'];
+			var phone=document.forms['regform']['phonenumber'];
+			var address=document.forms['regform']['address'];
+			if(name.value=="")
+			{
+				alert("enter the name");
+				name.focus();
+				return false;
+			}
+			if(password.value=="")
+			{
+				alert("enter the password");
+				name.focus();
+				return false;
+			}
+			if(email.value=="")
+			{
+				alert("enter the email");
+				name.focus();
+				return false;
+			}
+
+				if(email.value.indexOf('@',0)<0)
+			{
+				alert("enter the @");
+				name.focus();
+				return false;
+			}
+			if(phone.value=="")
+			{
+				alert("enter the phone number");
+				name.focus();
+				return false;
+			}
+			if(address.value=="")
+			{
+				alert("enter the address");
+				name.focus();
+				return false;
+			}
+               
+               return true;
+           }
+
+
+
+
+
+
+
+		
+	</script>
+
+</body>
+</html>
